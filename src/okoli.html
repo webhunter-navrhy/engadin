@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+{% set titulek = 'Okolí hotelu Engadin – sjezdovky, Žabáky, Šumava' %}
+{% set popis = 'Sjezdovky Belvedere a Nad nádražím, skibus Špičák, biotop Žabáky a Šumava kolem hotelu Engadin v Železné Rudě.' %}
+{% set cesta = 'okoli/' %}
+{% block obsah %}
+<section class="strana-hlava"><div class="wrap"><h1>Cesty z hotelu</h1><p>Co je blízko, ať víte, kolik času skupina stráví chůzí a kolik hrou.</p></div></section>
+<section class="sekce"><div class="wrap pul reveal">
+  <div class="trasy">
+    <div class="trasa"><span class="znacka"></span><h3>Biotop Žabáky</h3><span class="km">250 m</span><p>Procházka z hotelu v klidu po okolí.</p></div>
+    <div class="trasa"><span class="znacka m"></span><h3>Skibus Špičák</h3><span class="km">500 m</span><p>Zastávka u hotelu, výlet na lyže do dalšího střediska.</p></div>
+    <div class="trasa"><span class="znacka"></span><h3>Belvedere</h3><span class="km">z hotelu</span><p>Sjezdovka dostupná na lyžích přímo z hotelu.</p></div>
+    <div class="trasa"><span class="znacka m"></span><h3>Nad nádražím</h3><span class="km">z hotelu</span><p>Druhá sjezdovka, na kterou se dostanete z hotelu na lyžích.</p></div>
+  </div>
+  <figure class="foto sik">{{ img('priroda.jpg', 'Šumavské lesy a louka s chatou v údolí', sizes='(min-width: 52rem) 40vw, 100vw') }}<figcaption>Výhled z hotelu.</figcaption></figure>
+</div></section>
+<section class="sekce tmava"><div class="wrap pul obr reveal">
+  <div><div class="nadpis"><span class="znacka m"></span><h2>Čtyři roční období</h2></div>
+    <p class="uvod">Léto v lese, podzim na stezkách, zima na svahu. Hotel stojí na jednom místě, program se mění.</p>
+    <p><a class="tlacitko sv" href="{{ url('kontakt') }}">Poptat pobyt</a></p></div>
+  <figure class="foto sik">{{ img('zima_smrk.jpg', 'Zasněžený smrk u hotelu pod modrou oblohou', sizes='(min-width: 52rem) 40vw, 100vw') }}</figure>
+</div></section>
+{% endblock %}

@@ -1,0 +1,55 @@
+{
+  "slug": "engadin",
+  "nazev": "Hotel Engadin (LippertHotels)",
+  "url": "https://webhunter-navrhy.github.io/engadin/",
+  "base": "/engadin/",
+  "lang": "cs",
+  "popis": "Hotel Engadin v Železné Rudě: ubytování pro školy v přírodě, lyžařské výcviky, sportovní kluby a turisty u sjezdovky Belvedere na Šumavě.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "hero_zima.jpg",
+  "logo": "",
+  "theme_color": "#a61e22",
+  "typ": "Hotel",
+  "ico": "",
+  "kontakt": {
+    "email": "info@engadinhotel.cz",
+    "telefon": "+420 777 35 35 15",
+    "adresa": {
+      "ulice": "Železná Ruda 35",
+      "psc": "340 04",
+      "mesto": "Železná Ruda",
+      "zeme": "CZ"
+    }
+  },
+  "oteviraci_doba": [],
+  "sameas": [],
+  "cenove_rozpeti": "850–1350 Kč / osoba / noc",
+  "formular": {
+    "endpoint": "",
+    "demo": true,
+    "predmet": "Poptávka skupiny z webu Hotel Engadin"
+  },
+  "nav": [
+    {
+      "text": "Skupiny",
+      "href": "skupiny/"
+    },
+    {
+      "text": "Ubytování",
+      "href": "ubytovani/"
+    },
+    {
+      "text": "Okolí",
+      "href": "okoli/"
+    },
+    {
+      "text": "Ceník",
+      "href": "cenik/"
+    },
+    {
+      "text": "Poptávka",
+      "href": "kontakt/"
+    }
+  ]
+}

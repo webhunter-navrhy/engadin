@@ -1,0 +1,31 @@
+{% extends "_base.html" %}
+{% set titulek = 'Poptávka pro skupinu a kontakt | Hotel Engadin' %}
+{% set popis = 'Pošlete termín a počet osob, hotel Engadin v Železné Rudě vám připraví nabídku pro školu, klub nebo oddíl.' %}
+{% set cesta = 'kontakt/' %}
+{% block obsah %}
+<section class="strana-hlava"><div class="wrap"><h1>Poptávka pro skupinu</h1><p>Napište, kdo jedete, kolik vás je a kdy. Odpovíme nabídkou na míru.</p></div></section>
+<section class="sekce"><div class="wrap dvou" style="grid-template-columns:1.6fr 1fr;align-items:start">
+  <form class="formular" method="post" data-endpoint="{{ site.formular.endpoint }}" data-demo="1">
+    <label>Jméno a škola / klub <input name="jmeno" autocomplete="name" required></label>
+    <label>E-mail <input name="email" type="email" autocomplete="email" required></label>
+    <label>Typ pobytu <select name="typ"><option>Škola v přírodě</option><option>Lyžařský výcvik</option><option>Sportovní soustředění</option><option>Klub turistů</option><option>Jiné</option></select></label>
+    <label>Počet osob (děti / dospělí) <input name="pocet" placeholder="např. 45 dětí a 4 vedoucí"></label>
+    <label>Termín od <input name="od" type="date"></label>
+    <label>Termín do <input name="do" type="date"></label>
+    <label>Stravování <select name="strava"><option>Polopenze</option><option>Pouze snídaně</option></select></label>
+    <label>Telefon <input name="telefon" type="tel" autocomplete="tel"></label>
+    <label class="cela">Poznámka <textarea name="zprava" rows="4"></textarea></label>
+    <div class="past" aria-hidden="true"><label>Nevyplňovat <input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+    <input type="hidden" name="_subject" value="{{ site.formular.predmet }}">
+    <button type="submit">Odeslat poptávku</button>
+    <p class="formular-stav" role="status" aria-live="polite"></p>
+  </form>
+  <aside class="poz">
+    <h3>Hotel Engadin</h3>
+    <p>Železná Ruda 35<br>340 04 Železná Ruda</p>
+    <p style="margin-top:.8rem"><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a><br><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a></p>
+    <p class="pozn" style="margin-top:.8rem">Check-in od 14:00, check-out do 10:00. Příjezd lze domluvit individuálně.</p>
+    <p class="pozn" style="margin-top:.8rem"><a href="https://www.google.com/maps/search/?api=1&query=Hotel+Engadin+%C5%BDelezn%C3%A1+Ruda+35">Otevřít v mapě</a></p>
+  </aside>
+</div></section>
+{% endblock %}

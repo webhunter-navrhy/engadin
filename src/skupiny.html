@@ -1,0 +1,43 @@
+{% extends "_base.html" %}
+{% set titulek = 'Pobyty pro skupiny – školy, lyžařské výcviky, kluby | Hotel Engadin' %}
+{% set popis = 'Hotel Engadin v Železné Rudě: školy v přírodě, lyžařské výcviky, soustředění sportovních klubů a pobyty klubů turistů.' %}
+{% set cesta = 'skupiny/' %}
+{% block obsah %}
+<section class="strana-hlava"><div class="wrap"><h1>Čtyři cesty, jeden hotel</h1><p>Co hotel nabízí školám, lyžařským kurzům, sportovním klubům a turistům. Doplňte počet osob a termín, zbytek vám připravíme.</p></div></section>
+
+{% macro blok(id, nadpis, foto, alt, uvod, body, obr=false, tm=false, m=false) %}
+<section class="sekce{{ ' tmava' if tm }}" id="{{ id }}">
+  <div class="wrap pul reveal{{ ' obr' if obr }}">
+    <div>
+      <div class="nadpis"><span class="znacka{{ ' m' if m }}"></span><h2>{{ nadpis }}</h2></div>
+      <p class="uvod">{{ uvod }}</p>
+      <ul class="body" role="list">{% for b in body %}<li><span>{{ b|safe }}</span></li>{% endfor %}</ul>
+      <p style="margin-top:var(--space-3)"><a class="tlacitko{{ ' sv' if tm }}" href="{{ url('kontakt') }}">Poptat {{ nadpis|lower }}</a></p>
+    </div>
+    <figure class="foto sik">{{ img(foto, alt, sizes='(min-width: 52rem) 40vw, 100vw') }}</figure>
+  </div>
+</section>
+{% endmacro %}
+
+{{ blok('skoly', 'Školy v přírodě', 'koutek.jpg', 'Dětský koutek v hotelu s malovaným stromem na stěně', 'Děti mají být celý den venku a večer v klidu. Hotel to umožňuje bez přejezdů.', [
+ '<b>Pokoje pro celé třídy.</b> 36 pokojů, celkem 140 lůžek, 28 pokojů s vlastní koupelnou.',
+ '<b>Hřiště a dětský koutek</b> přímo u hotelu.',
+ '<b>Jídelna pro 130 lidí</b> s velkými okny do lesa, polopenze v ceně pobytu.',
+ '<b>Společenské místnosti</b> na program za špatného počasí, večerní čtení nebo hry.'], m=false) }}
+{{ blok('lyze', 'Lyžařské výcviky', 'zima_svah.jpg', 'Zasněžená sjezdovka vedle hotelu Engadin', 'Zima na Šumavě začíná u hotelových dveří.', [
+ '<b>Sjezdovky Belvedere a Nad nádražím</b> dostupné z hotelu na lyžích.',
+ '<b>Skibus Špičák</b> staví 500 m od hotelu.',
+ '<b>Sauna a krb</b> pro večerní zahřátí a rozbor dne.',
+ '<b>Zimní pobyt jen se snídaní nebo s polopenzí.</b>'], obr=true, tm=true, m=true) }}
+{{ blok('kluby', 'Sportovní kluby', 'spolecenska2.jpg', 'Společenská místnost s křesly a stolky', 'Soustředění potřebuje prostor, ve kterém se dá trénovat, jíst i se sejít.', [
+ '<b>Dvě společenské místnosti</b> pro porady, videorozbory a teorii.',
+ '<b>Stolní tenis, stolní fotbal a šipky</b> v hotelu.',
+ '<b>Sauna</b> pro regeneraci po tréninku.',
+ '<b>Okolní lesy a louky</b> pro kondiční běhy a venkovní trénink.']) }}
+{{ blok('turiste', 'Kluby turistů', 'priroda.jpg', 'Pohled z hotelu na lesy Šumavy a chatu v údolí', 'Šumavské cesty začínají kousek od hotelu, večer se vrátíte do tepla.', [
+ '<b>Biotop Žabáky</b> 250 m od hotelu.',
+ '<b>Pokoje i společné prostory</b> pro oddíl, klub nebo rodinný zájezd.',
+ '<b>Krb v hale</b> a jídelna, kde se dá sednout celou skupinou.'], obr=true, tm=true, m=true) }}
+
+<section class="cta"><div class="wrap"><h2>Nevíte, co se k vám hodí? Napište počet osob a termín</h2><a class="tlacitko sv" href="{{ url('kontakt') }}">Odeslat poptávku</a></div></section>
+{% endblock %}

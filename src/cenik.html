@@ -1,0 +1,29 @@
+{% extends "_base.html" %}
+{% set titulek = 'Ceník ubytování, slevy a storno podmínky | Hotel Engadin' %}
+{% set popis = 'Ceník hotelu Engadin v Železné Rudě: polopenze od 1 200 Kč a snídaně od 850 Kč za osobu a noc, slevy pro děti, Silvestr 2026.' %}
+{% set cesta = 'cenik/' %}
+{% block obsah %}
+<section class="strana-hlava"><div class="wrap"><h1>Ceník</h1><p>Ceny za osobu a noc. Skupinovou nabídku připravíme podle počtu osob a termínu.</p></div></section>
+<section class="sekce"><div class="wrap">
+  <table class="tabulka reveal">
+    <thead><tr><th>Délka pobytu</th><th>Polopenze</th><th>Pouze snídaně</th></tr></thead>
+    <tbody><tr><th>1 až 3 noci</th><td><b>1 350 Kč</b></td><td><b>1 000 Kč</b></td></tr>
+    <tr><th>4 a více nocí</th><td><b>1 200 Kč</b></td><td><b>850 Kč</b></td></tr></tbody>
+  </table>
+  <div class="dvou" style="margin-top:var(--space-4)">
+    <div class="poz"><h3>Slevy</h3><ul>
+      <li>dítě do 2,99 let: zdarma bez nároku na lůžko</li><li>dítě do 9 let: sleva 40 %</li><li>dítě do 15 let: sleva 20 %</li>
+      <li>držitelé ZTP a ZTP/P: sleva 25 % z ubytování</li><li>senioři nad 65 let: sleva 20 % z ubytování</li><li>věrní hosté: sleva až 20 %</li></ul>
+      <p class="pozn" style="margin-top:.6rem">Slevy nelze kombinovat, platí vždy nejvyšší. Nevztahují se na silvestrovské pobyty.</p></div>
+    <div class="poz"><h3>Storno podmínky</h3><ul>
+      <li>více než 101 dní před příjezdem: 20 %</li><li>61 až 100 dní: 40 %</li><li>31 až 60 dní: 60 %</li><li>5 až 30 dní: 80 %</li><li>méně než 5 dní: 100 %</li></ul>
+      <p class="pozn" style="margin-top:.6rem">Rezervaci potvrzuje úhrada zálohové faktury. Check-in 14:00, check-out 10:00, příjezd lze domluvit individuálně.</p></div>
+  </div>
+</div></section>
+<section class="sekce tmava"><div class="wrap pul reveal">
+  <div><div class="nadpis"><span class="znacka m"></span><h2>Silvestr 2026</h2></div>
+    <p class="uvod">Pobyt od 26. 12. 2026 do 3. 1. 2027, minimálně 3 noci.</p>
+    <ul class="body" role="list"><li><span><b>1 350 Kč</b> za dospělou osobu a noc s polopenzí.</span></li><li><span>Silvestrovský večer <b>900 Kč</b> za osobu.</span></li><li><span>Děti 3 až 9 let sleva 40 %, 10 až 15 let sleva 20 %.</span></li></ul></div>
+  <figure class="foto sik">{{ img('zima_hotel.jpg', 'Hotel Engadin v zimě pod modrou oblohou', sizes='(min-width: 52rem) 40vw, 100vw') }}</figure>
+</div></section>
+{% endblock %}

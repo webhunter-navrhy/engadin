@@ -1,0 +1,60 @@
+{
+ "slug": "engadin",
+ "zdroj_url": "https://engadinhotel.cz",
+ "firma": "Hotel Engadin (LippertHotels)",
+ "obor": [
+  "gastro a ubytování",
+  "sport a výuka"
+ ],
+ "ico": "",
+ "ares": null,
+ "kontakty": {
+  "emaily": [
+   "emailova.adresa@domena.cz",
+   "info@engadinhotel.cz"
+  ],
+  "telefony": [],
+  "adresa": "",
+  "socialni_site": []
+ },
+ "logo": {
+  "soubor": "podklady/logo.ico",
+  "zdroj": "https://engadinhotel.cz/styles/default/img/favicon.ico?1792144081",
+  "rozmery": [
+   48,
+   48
+  ]
+ },
+ "barvy": {
+  "css_promenne": {},
+  "z_css": [
+   "#a61e22",
+   "#3875d7",
+   "#fcff00",
+   "#26d626",
+   "#21335e",
+   "#96ff00"
+  ],
+  "z_loga": [],
+  "theme_color": "#ffffff",
+  "doporucene": [
+   "#a61e22",
+   "#3875d7"
+  ]
+ },
+ "fotky": [],
+ "fakta": "140 lůžek, 130 míst v jídelně, 2 společenské místnosti, skibus 500 m",
+ "chybi": [
+  "IČO",
+  "potvrzení služeb a ceníku",
+  "logo ve vyšší kvalitě"
+ ],
+ "popis_webu": "",
+ "adresa": "Železná Ruda 35, 340 04",
+ "cil": "poptávky velkých skupin: školy v přírodě, lyžařské výcviky, sportovní kluby, kluby turistů",
+ "overeno_na_engadinhotel.cz": {
+  "pokoje": "36 pokojů, 28 s vlastní koupelnou",
+  "telefon": "+420 777 35 35 15 (uveden na stávajícím webu)",
+  "ceny": "850–1350 Kč za osobu a noc (stránka /informace/)"
+ }
+}

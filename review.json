@@ -1,0 +1,16 @@
+{
+  "znamka": 7,
+  "slabiny": [
+    "Pruh s čísly pod hero (PC buňka 2, mobil buňka 2) je pořád na webu: 140 / 130 / 2 / 500 m ve čtyřech sloupcích s červenými linkami. Fakta jsou teď v briefu doložená ze zdroje (36 pokojů, telefon, ceny), takže pravdivost je v pořádku. Zůstává ale zakázaný vzor pruhu se statistikami. Oprava: blok .fakta smazat a čísla přesunout jako bílé směrovky ve stylu hero šipek na krémové pozadí nad sekci „Kam chcete s kým“ („Skibus Špičák 500 m“, „Biotop Žabáky 250 m“, „Jídelna 130 míst“, „140 lůžek ve 36 pokojích“). Kapacity můžou zůstat i jako věta v textu karet.",
+    "Sekce „Bezpečně venku i uvnitř“ se nezměnila. Na PC (buňka 3) je fotka hotelu pořád malá, šikmo zkosená (lichoběžník) a plave vpravo nahoře, pod ní zůstává asi 250 px prázdné modré plochy. Na mobilu (buňka 5) je fotka až pod seznamem, s okraji a vysoká jen asi 170 px. Oprava: zrušit transform/skew/rotate, fotku dát do pravé poloviny sekce na plnou výšku (align-self: stretch; height: 100%; object-fit: cover; bez paddingu). Pod 820 px ji dát nad nadpis na plnou šířku (margin-inline: calc(-1*gutter)) s min-height 260 px.",
+    "Hlavička na 390 px (mobil buňka 1) se pořád láme na dva řádky: nahoře logo a Poptávka, pod nimi Skupiny, Ubytování, Okolí a Ceník. Sticky lišta tak zabírá asi 110 px a působí jako zmenšený desktop. Oprava: pod 820 px jedna řádka do 64 px (vlajka a HOTEL ENGADIN vlevo, malé tlačítko Poptávka a hamburger 44×44 vpravo), odkazy přesunout do vysouvacího panelu. Na PC zůstal neopravený i text karet „Kam chcete s kým“ (buňka 2): asi 12–13 px světle šedé. Zvětšit na 16 px s line-height 1,55 a barvou aspoň #4a4a4a."
+  ],
+  "silne": [
+    "Silný koncept turistických směrovek v hero (červené a modré šipky KČT pro čtyři cílové skupiny), který pokračuje v ikonách seznamů a kartách.",
+    "Brand sedí: červená #a61e22 a navy #21335e z jejich CSS, Barlow Condensed s háčky v pořádku.",
+    "Galerie „Jak to u nás vypadá“ s reálnými fotkami jídelny, krbu, pokojů, dětského koutku a hotelu v zimě, ostrá a v pravidelné mřížce.",
+    "Jasná hlavní akce: červené CTA „Poptat pobyt pro skupinu“ v hero a závěrečná výzva „Máte termín a počet dětí?“, v patičce kontakt a check-in. QA bez přetečení na všech šířkách."
+  ],
+  "verdikt": "opravit – žádná ze tří minulých výtek není zapracovaná (pruh čísel, fotka v sekci Bezpečně, dvouřádková mobilní hlavička a drobný šedý text karet). Lepší je jen doložení faktů v briefu, proto známka zůstává 7.",
+  "_hash": "f7a1109de3ced5368c044cb9991b7f4ecbc2249d"
+}
